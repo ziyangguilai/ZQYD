@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/mantou5050/youth.git ~/youth
+          git clone https://github.com/ziyangguilai/ZQYD.git ~/ZQYD
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -30,12 +30,12 @@ jobs:
       - name: npm install
         if: env.YOUTH_HEADER2
         run: |
-          cd ~/youth
+          cd ~/ZQYD
           npm install
       - name: '运行 【中青看点】'
         if: env.YOUTH_HEADER2
         run: |
-          cd ~/youth
+          cd ~/ZQYD
           node youth.js
         env:
           YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
