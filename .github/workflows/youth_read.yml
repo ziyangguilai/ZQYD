@@ -6,7 +6,7 @@ name: youth_read(中青自动阅读)
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/20 * * * *'
+     - cron: '*/30 * * * *'
   watch:
     types: Youth_Read
 jobs:
